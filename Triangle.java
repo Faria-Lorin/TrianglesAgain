@@ -49,4 +49,14 @@ public class Triangle{
                   "v3(" + v3.getX() + ", " + v1.getY() + ") ");
     return str;
   }
+  
+  public void setVertex(int index, Point newP){
+    if (index == 0){
+      v1 = newP;
+    }
+    if (index == 1){
+      v2 = newP;
+    }
+    else {v3 = newP;}
+  }
 }
