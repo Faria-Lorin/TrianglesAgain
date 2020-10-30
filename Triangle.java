@@ -45,11 +45,11 @@ public class Triangle{
   }
   public String toString(){
     String str = ("v1(" + v1.getX() + ", " + v1.getY() + ") "+
-                  "v2(" + v2.getX() + ", " + v1.getY() + ") "+
-                  "v3(" + v3.getX() + ", " + v1.getY() + ") ");
+                  "v2(" + v2.getX() + ", " + v2.getY() + ") "+
+                  "v3(" + v3.getX() + ", " + v3.getY() + ")");
     return str;
   }
-  
+
   public void setVertex(int index, Point newP){
     if (index == 0){
       v1 = newP;
@@ -57,6 +57,8 @@ public class Triangle{
     if (index == 1){
       v2 = newP;
     }
-    else {v3 = newP;}
+    else {
+      v3 = newP;
+    }
   }
 }
