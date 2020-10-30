@@ -29,4 +29,18 @@ public class Triangle{
 
   }
 
+
+  public String classify(){
+    double dist1 = (double)(Math.round(v1.distanceTo(v2)*10000))/10000;
+    double dist2 = (double)(Math.round(v2.distanceTo(v3)*10000))/10000;
+    double dist3 = (double)(Math.round(v3.distanceTo(v1)*10000))/10000;
+
+      if (dist1 == dist2 && dist2 == dist3){
+          return "equilateral";
+        }else if (dist1 == dist2 || dist1 == dist3 || dist2 == dist3){
+          return "isosceles";
+        }else{
+          return "scalene";
+        }
+  }
 }
