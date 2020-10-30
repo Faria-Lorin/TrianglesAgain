@@ -25,7 +25,11 @@ public class Point{
  }
 
  public boolean equals( Point other){
-   if ((this.x == other.x) && (this.y == other.y)){
+   Point p1 = new Point(this.x, this.y);
+   if (other == null && other == p1){
+     return true;
+   }
+   else if (p1 == other){
      return true;
    }
    return false;
